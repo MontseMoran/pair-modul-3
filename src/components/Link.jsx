@@ -1,21 +1,17 @@
 
-function Link (){
-return (
-<>
-<li class="menu-item">
-      <a title="Blog" className="menu-link" href="https://adalab.es/blog/">
-        Blog
+function Link({ texto, href, openInNewTab }) {
+  return (
+    <li className="menu-item">
+      <a
+        title={texto}
+        className="menu-link"
+        href={href}
+        target={openInNewTab ? "_blank" : "_self"}
+      >
+        {texto}
       </a>
     </li>
-    <li class="menu-item">
-      <a title="Contacto" className="menu-link" href="https://adalab.es/contacto/">
-        Contacto
-      </a>
-    </li>
-</>
-
-)
-
+  );
 }
 
 export default Link
